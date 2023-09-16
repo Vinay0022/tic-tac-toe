@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 function Square({ value, onSquareClick }) {
+
   return (
     <button className="square" onClick={onSquareClick}>
       {value}
@@ -49,7 +50,7 @@ export default function Game() {
       <div className="container mx-auto rounded border border-black text-black text-center text-5xl my-20 "> Tic Tac Toe</div>
       <div className="game md:container md:mx-auto border border-black">
         <div className="game-board my-20 ">
-          <Board 
+          <Board
             xIsNext={xIsNext}
             squares={currentSquares}
             onPlay={handlePlay}

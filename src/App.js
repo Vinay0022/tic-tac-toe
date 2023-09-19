@@ -47,16 +47,16 @@ export default function Game() {
   return (
     <>
       <div className=" flex flex-col h-screen bg-gray-300">
-      <div className="container mx-auto border-4 border-black rounded-xl text-black text-center text-5xl my-9 w-96 py-2"> Tic Tac Toe</div>
-      <div className="game md:container md:mx-auto  card w-96 h-3/4 bg-base-100 shadow-xl">
-        <div className="game-board my-20">
+      <div className="container mx-auto border-4 border-black rounded-xl text-black text-center text-5xl mt-9 w-96 py-2"> Tic Tac Toe</div>
+      <div className="game md:container md:mx-auto  card h-3/4 ">
+        <div className="game-board my-28">
           <Board
             xIsNext={xIsNext}
             squares={currentSquares}
             onPlay={handlePlay}
           />
         </div>
-        <div className="border-4 border-black font-semibold rounded-xl game-info my-7">
+        <div className="border-4 border-black font-semibold h-max rounded-xl game-info my-7">
           <ol>{moves}</ol>
         </div>
       </div>

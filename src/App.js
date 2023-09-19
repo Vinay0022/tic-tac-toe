@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
+const style = {background:"gray",border:"4px solid black"}
 function Square({ value, onSquareClick }) {
 
   return (
-    <button className="square" onClick={onSquareClick}>
+    <button style= {style} className="square text-black" onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -28,14 +29,14 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = "Go to move # " + move;
+      description = "Go To Move # " + move;
     } else {
-      description = "Go to game start";
+      description = "Go To Game Start";
     }
     return (
-      <li key={move}>
+      <li className="flex flex-col  my-4" key={move}>
         <button
-          className='border border-black lass="bg-transparent text-black my-2 px-5 '
+          className=' border border-black rounded-xl lass="bg-transparent text-black  my-1 text-center px-5 '
           onClick={() => jumpTo(move)}
         >
           {description}
@@ -46,17 +47,18 @@ export default function Game() {
 
   return (
     <>
-      <div className=" flex flex-col h-screen">
-      <div className="container mx-auto rounded border border-black text-black text-center text-5xl my-20 "> Tic Tac Toe</div>
-      <div className="game md:container md:mx-auto border border-black">
-        <div className="game-board my-20 ">
+      <div className=" flex flex-col h-screen bg-gray-300">
+      <div className="container mx-auto border-4 border-black rounded-xl text-black text-center text-5xl mt-9 w-96 py-2"> Tic Tac Toe</div>
+      <div className="game md:container md:mx-auto  card h-3/4 ">
+        <div className="game-board my-28">
+>>>>>>> tte-ui
           <Board
             xIsNext={xIsNext}
             squares={currentSquares}
             onPlay={handlePlay}
           />
         </div>
-        <div className="border-4 border-black game-info my-7">
+        <div className="border-4 border-black font-semibold h-max rounded-xl game-info my-7">
           <ol>{moves}</ol>
         </div>
       </div>

@@ -51,7 +51,6 @@ export default function Game() {
       <div className="container mx-auto border-4 border-black rounded-xl text-black text-center text-5xl mt-9 w-96 py-2"> Tic Tac Toe</div>
       <div className="game md:container md:mx-auto  card h-3/4 ">
         <div className="game-board my-28">
->>>>>>> tte-ui
           <Board
             xIsNext={xIsNext}
             squares={currentSquares}

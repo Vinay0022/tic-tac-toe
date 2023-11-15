@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
+
 const style = {background:"gray",border:"4px solid black"}
 function Square({ value, onSquareClick }) {
 
